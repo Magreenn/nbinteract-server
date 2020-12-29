@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 
 
-<title>Método dos Mínimos Quadrados</title>
+<title>Projeto1</title>
 
 <style type="text/css">
     /*!
@@ -16382,13 +16382,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Índices<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Metodologia" data-toc-modified-id="Metodologia-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Metodologia</a></span></li><li><span><a href="#Multiplicação-Matricial" data-toc-modified-id="Multiplicação-Matricial-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Multiplicação Matricial</a></span></li><li><span><a href="#Pivoteamento" data-toc-modified-id="Pivoteamento-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Pivoteamento</a></span></li><li><span><a href="#Transposição-de-Matriz" data-toc-modified-id="Transposição-de-Matriz-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Transposição de Matriz</a></span></li><li><span><a href="#Eliminação-de-Gauss-Simples" data-toc-modified-id="Eliminação-de-Gauss-Simples-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Eliminação de Gauss Simples</a></span></li><li><span><a href="#Eliminação-de-Gauss-com-Pivoteamento-Parcial" data-toc-modified-id="Eliminação-de-Gauss-com-Pivoteamento-Parcial-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Eliminação de Gauss com Pivoteamento Parcial</a></span></li><li><span><a href="#Retro-Substituição" data-toc-modified-id="Retro-Substituição-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Retro-Substituição</a></span></li><li><span><a href="#Matriz-de-Vandermonde" data-toc-modified-id="Matriz-de-Vandermonde-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Matriz de Vandermonde</a></span></li><li><span><a href="#Coeficiente-de-Correlação-de-Pearson" data-toc-modified-id="Coeficiente-de-Correlação-de-Pearson-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Coeficiente de Correlação de Pearson</a></span></li><li><span><a href="#Coeficiente-de-Determinação-$R^2$" data-toc-modified-id="Coeficiente-de-Determinação-$R^2$-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Coeficiente de Determinação $R^2$</a></span></li><li><span><a href="#Função-do-Método-dos-Mínimos-Quadrados" data-toc-modified-id="Função-do-Método-dos-Mínimos-Quadrados-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Função do Método dos Mínimos Quadrados</a></span></li><li><span><a href="#Exemplo" data-toc-modified-id="Exemplo-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Exemplo</a></span><ul class="toc-item"><li><span><a href="#Dados" data-toc-modified-id="Dados-12.1"><span class="toc-item-num">12.1&nbsp;&nbsp;</span>Dados</a></span></li><li><span><a href="#Ajuste-de-uma-Reta" data-toc-modified-id="Ajuste-de-uma-Reta-12.2"><span class="toc-item-num">12.2&nbsp;&nbsp;</span>Ajuste de uma Reta</a></span></li><li><span><a href="#Variando-o-Grau-do-Polinômio-Regressor" data-toc-modified-id="Variando-o-Grau-do-Polinômio-Regressor-12.3"><span class="toc-item-num">12.3&nbsp;&nbsp;</span>Variando o Grau do Polinômio Regressor</a></span></li></ul></li><li><span><a href="#Gerador-de-Pontos" data-toc-modified-id="Gerador-de-Pontos-13"><span class="toc-item-num">13&nbsp;&nbsp;</span>Gerador de Pontos</a></span><ul class="toc-item"><li><span><a href="#Gráfico-Estático" data-toc-modified-id="Gráfico-Estático-13.1"><span class="toc-item-num">13.1&nbsp;&nbsp;</span>Gráfico Estático</a></span></li><li><span><a href="#Gráfico-com-Rotação" data-toc-modified-id="Gráfico-com-Rotação-13.2"><span class="toc-item-num">13.2&nbsp;&nbsp;</span>Gráfico com Rotação</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Metodologia" data-toc-modified-id="Metodologia-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Metodologia</a></span></li><li><span><a href="#Multiplicação-Matricial" data-toc-modified-id="Multiplicação-Matricial-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Multiplicação Matricial</a></span></li><li><span><a href="#Pivoteamento" data-toc-modified-id="Pivoteamento-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Pivoteamento</a></span></li><li><span><a href="#Transposição-de-Matriz" data-toc-modified-id="Transposição-de-Matriz-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Transposição de Matriz</a></span></li><li><span><a href="#Eliminação-de-Gauss-Simples" data-toc-modified-id="Eliminação-de-Gauss-Simples-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Eliminação de Gauss Simples</a></span></li><li><span><a href="#Eliminação-de-Gauss-com-Pivoteamento-Parcial" data-toc-modified-id="Eliminação-de-Gauss-com-Pivoteamento-Parcial-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Eliminação de Gauss com Pivoteamento Parcial</a></span></li><li><span><a href="#Retro-Substituição" data-toc-modified-id="Retro-Substituição-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Retro-Substituição</a></span></li><li><span><a href="#Matriz-de-Vandermonde" data-toc-modified-id="Matriz-de-Vandermonde-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Matriz de Vandermonde</a></span></li><li><span><a href="#Coeficiente-de-Correlação-de-Pearson" data-toc-modified-id="Coeficiente-de-Correlação-de-Pearson-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Coeficiente de Correlação de Pearson</a></span></li><li><span><a href="#Coeficiente-de-Determinação-$R^2$" data-toc-modified-id="Coeficiente-de-Determinação-$R^2$-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Coeficiente de Determinação $R^2$</a></span></li><li><span><a href="#Função-do-Método-dos-Mínimos-Quadrados" data-toc-modified-id="Função-do-Método-dos-Mínimos-Quadrados-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Função do Método dos Mínimos Quadrados</a></span></li><li><span><a href="#Exemplo" data-toc-modified-id="Exemplo-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Exemplo</a></span><ul class="toc-item"><li><span><a href="#Dados" data-toc-modified-id="Dados-12.1"><span class="toc-item-num">12.1&nbsp;&nbsp;</span>Dados</a></span></li><li><span><a href="#Ajuste-de-uma-Reta" data-toc-modified-id="Ajuste-de-uma-Reta-12.2"><span class="toc-item-num">12.2&nbsp;&nbsp;</span>Ajuste de uma Reta</a></span></li><li><span><a href="#Variando-o-Grau-do-Polinômio-Regressor" data-toc-modified-id="Variando-o-Grau-do-Polinômio-Regressor-12.3"><span class="toc-item-num">12.3&nbsp;&nbsp;</span>Variando o Grau do Polinômio Regressor</a></span></li></ul></li><li><span><a href="#Gerador-de-Pontos" data-toc-modified-id="Gerador-de-Pontos-13"><span class="toc-item-num">13&nbsp;&nbsp;</span>Gerador de Pontos</a></span><ul class="toc-item"><li><span><a href="#Gráfico-Estático" data-toc-modified-id="Gráfico-Estático-13.1"><span class="toc-item-num">13.1&nbsp;&nbsp;</span>Gráfico Estático</a></span></li><li><span><a href="#Gráfico-com-Rotação" data-toc-modified-id="Gráfico-com-Rotação-13.2"><span class="toc-item-num">13.2&nbsp;&nbsp;</span>Gráfico com Rotação</a></span></li></ul></li><li><span><a href="#Conclusão" data-toc-modified-id="Conclusão-14"><span class="toc-item-num">14&nbsp;&nbsp;</span>Conclusão</a></span></li></ul></div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Tecnicas-de-Programa&#231;&#227;o--">Tecnicas de Programa&#231;&#227;o <a class="tocSkip"> </a><a class="anchor-link" href="#Tecnicas-de-Programa&#231;&#227;o--">&#182;</a></h1><h2 id="Algor&#237;timo-dos-M&#237;nimos-Quadrados-"><em>Algor&#237;timo dos M&#237;nimos Quadrados</em><a class="tocSkip"> </a><a class="anchor-link" href="#Algor&#237;timo-dos-M&#237;nimos-Quadrados-">&#182;</a></h2><h6 id="Aluno:-Jo&#227;o-Pedro-Nunes-Cavalcante-DRE:-116082493--">Aluno: Jo&#227;o Pedro Nunes Cavalcante DRE: 116082493 <a class="tocSkip"> </a><a class="anchor-link" href="#Aluno:-Jo&#227;o-Pedro-Nunes-Cavalcante-DRE:-116082493--">&#182;</a></h6><hr>
+<p><img src="img/Logo-Poli_colorida_horizontal.png" width=700 /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Tecnicas-de-Programa&#231;&#227;o--">Tecnicas de Programa&#231;&#227;o <a class="tocSkip"> </a><a class="anchor-link" href="#Tecnicas-de-Programa&#231;&#227;o--">&#182;</a></h1><h2 id="Algor&#237;timo-dos-M&#237;nimos-Quadrados-"><em>Algor&#237;timo dos M&#237;nimos Quadrados</em><a class="tocSkip"> </a><a class="anchor-link" href="#Algor&#237;timo-dos-M&#237;nimos-Quadrados-">&#182;</a></h2><h6 id="Aluno:-Jo&#227;o-Pedro-Nunes-Cavalcante--DRE:-116082493--">Aluno: Jo&#227;o Pedro Nunes Cavalcante  DRE: 116082493 <a class="tocSkip"> </a><a class="anchor-link" href="#Aluno:-Jo&#227;o-Pedro-Nunes-Cavalcante--DRE:-116082493--">&#182;</a></h6><hr>
 
 </div>
 </div>
@@ -16431,6 +16438,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Metodologia">Metodologia<a class="anchor-link" href="#Metodologia">&#182;</a></h2><p>No desenvolvimento deste código não será utilizado nenhuma biblioteca que de recursos de algebra linear, somente os recursos disponíveis do python. O recomendado seria utilizar a biblioteca Numpy porem para fins didáticos iremos desenvolver um algorítimo de Minimos Quadrados sem ajuda desta biblioteca, salvo agumas pontuais excessões que seram evidenciadas e explicadas o porque de sua utilização como por exemplo usada para garantir que os códigos desenvolvidos estão fazendo o que deveriam fazer.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -16535,6 +16549,13 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Pivoteamento">Pivoteamento<a class="anchor-link" href="#Pivoteamento">&#182;</a></h2><p>Desenvolveremos agora o algorítimo de pivoteamento que será utilizado no método de Eliminação de Gauss.</p>
 <p>Será feito o pivoteamento parcial do sistema já que uma implementação do pivoteamento completo não trás grandes benefícios para o tempo computacional gasto por ele. Sendo assim só haverá permutação das linhas.</p>
 
@@ -16584,6 +16605,13 @@ div#notebook {
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Transposi&#231;&#227;o-de-Matriz">Transposi&#231;&#227;o de Matriz<a class="anchor-link" href="#Transposi&#231;&#227;o-de-Matriz">&#182;</a></h2><p>Definiremos agora a operação de transposição matricial já que o python não tem uma operação de transposição de listas. Criaremos então uma função que faz essa operação.</p>
@@ -16670,6 +16698,13 @@ div#notebook {
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Elimina&#231;&#227;o-de-Gauss-Simples">Elimina&#231;&#227;o de Gauss Simples<a class="anchor-link" href="#Elimina&#231;&#227;o-de-Gauss-Simples">&#182;</a></h2><p>Definimos agora o Método de Eliminação de Gauss, que transforma uma sistema $Ax = b$ em um sistema $A^{'} x = b^{'}$ onde $A^{'}$ é uma matriz triângular superior. Neste método não foi utilizado nenhuma estratégia de pivoteamento.</p>
@@ -16767,6 +16802,13 @@ div#notebook {
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Elimina&#231;&#227;o-de-Gauss-com-Pivoteamento-Parcial">Elimina&#231;&#227;o de Gauss com Pivoteamento Parcial<a class="anchor-link" href="#Elimina&#231;&#227;o-de-Gauss-com-Pivoteamento-Parcial">&#182;</a></h2><p>Definimos agora o Método de Eliminação de Gauss que será usado para a resolução do Sistema Linear. Neste método implementamos em conjunto com o algorítimo de Eliminação de Gauss o algorítimo de Pivoteamento Parcial.</p>
@@ -16867,6 +16909,13 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Retro-Substitui&#231;&#227;o">Retro-Substitui&#231;&#227;o<a class="anchor-link" href="#Retro-Substitui&#231;&#227;o">&#182;</a></h2>
 </div>
 </div>
@@ -16961,6 +17010,13 @@ div#notebook {
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Matriz-de-Vandermonde">Matriz de Vandermonde<a class="anchor-link" href="#Matriz-de-Vandermonde">&#182;</a></h2>
@@ -17070,6 +17126,13 @@ $$X\cdot A=\begin{bmatrix}p\left(x_0\right) &amp; \cdots &amp; p\left(x_{M-1}\ri
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Coeficiente-de-Correla&#231;&#227;o-de-Pearson">Coeficiente de Correla&#231;&#227;o de Pearson<a class="anchor-link" href="#Coeficiente-de-Correla&#231;&#227;o-de-Pearson">&#182;</a></h2><p>O Coeficiente de Correlação entre duas variáveis é dado pela seguinte fórmula:
 $$
 \rho^2 = \frac{ \biggl(n \sum\limits_{i=1}^{n}{x_i y_i}-\Bigl(\sum\limits_{i=1}^{n}{x_i} \sum\limits_{i=1}^{n}{y_i}\Bigr) \biggr)^2}{\biggl(n \sum\limits_{i=1}^{n}{x_i^2} - \Bigl(\sum\limits_{i=1}^{n}{x_i} \Bigr)^2 \biggr) \biggl(n \sum\limits_{i=1}^{n}{y_i^2} - \Bigl(\sum\limits_{i=1}^{n}{y_i \Bigr)^2 \biggr)}}
@@ -17168,6 +17231,13 @@ $$<p>Será apartir desta forma que desenvolveremos a função que calcula o coef
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Coeficiente-de-Determina&#231;&#227;o-$R^2$">Coeficiente de Determina&#231;&#227;o $R^2$<a class="anchor-link" href="#Coeficiente-de-Determina&#231;&#227;o-$R^2$">&#182;</a></h2>
 </div>
 </div>
@@ -17225,6 +17295,13 @@ Será apartir dessa formula que desenvolveremos a função que calcula o coefici
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Fun&#231;&#227;o-do-M&#233;todo-dos-M&#237;nimos-Quadrados">Fun&#231;&#227;o do M&#233;todo dos M&#237;nimos Quadrados<a class="anchor-link" href="#Fun&#231;&#227;o-do-M&#233;todo-dos-M&#237;nimos-Quadrados">&#182;</a></h2><p>Agora tendo definido todas as partes que precisamos para desenvolvermos uma aplicação do Método dos Mínimos Quadrados, iremos desenvolver a função que aplica o Método dos Mínimos Quadrados aos pontos $(x_i,y_i)$ da amostra inicial, fazendo uma regressão de grau $N$.</p>
 
 </div>
@@ -17276,6 +17353,13 @@ Será apartir dessa formula que desenvolveremos a função que calcula o coefici
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Exemplo">Exemplo<a class="anchor-link" href="#Exemplo">&#182;</a></h2><p>Feremos aqui um exemplo para garantir que toda implementação está funcionando conforme deveria.</p>
@@ -17453,6 +17537,13 @@ R² = 99.71%
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Gerador-de-Pontos">Gerador de Pontos<a class="anchor-link" href="#Gerador-de-Pontos">&#182;</a></h2><p>Como pedido, faremos agora o exemplo onde para uma determinada função do 1º grau, teremos N pontos igualmente espaçados dentro de um intervalo, neste caso $[1,30]$ e introduziremos erros nos valores de x ou de y ou nos dois e depois aplicaremos o Método dos Mínimos Quadrados.</p>
 <p>Para isso desenvolveremos a seguinte função que vai gerar os pontos da amostra inicial.</p>
 
@@ -17531,7 +17622,7 @@ R² = 99.71%
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 
 <span class="n">N</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Nº de Pontos&#39;</span><span class="p">,</span><span class="nb">min</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Ángulo da Reta&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">85</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Ângulo da Reta&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 <span class="n">N</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="s2">&quot;450px&quot;</span>
 <span class="n">A</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="s2">&quot;450px&quot;</span>
 <span class="n">EX</span> <span class="o">=</span> <span class="n">Checkbox</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Erro em X?&#39;</span><span class="p">)</span>
@@ -17597,7 +17688,7 @@ R² = 99.71%
 
 
 <span class="n">N</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Nº de Pontos&#39;</span><span class="p">,</span><span class="nb">min</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Ángulo da Reta&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">85</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Ângulo da Reta&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 <span class="n">N</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="s2">&quot;450px&quot;</span>
 <span class="n">A</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="s2">&quot;450px&quot;</span>
 <span class="n">EX</span> <span class="o">=</span> <span class="n">Checkbox</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Erro em X?&#39;</span><span class="p">)</span>
@@ -17631,6 +17722,30 @@ R² = 99.71%
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclus&#227;o">Conclus&#227;o<a class="anchor-link" href="#Conclus&#227;o">&#182;</a></h2><p>Apartir do gráfico acima podemos tirar algumas conclusões sobre o erro da regressão ao se variar o ângulo da reta e as diferentes combinações de erros em x e y. Será analizado o $R^2$ como parâmetro para valorar a regressão feita.
+Podemos ver que quanto menor o ângulo da reta, ou seja quanto menor o coeficiente angular, menor será o $R^2$ sendo assim pior será a regressão.</p>
+<p>Podemos ver tambem que erros em y influênciam mais negativamente no $R^2$ do que erros em x, pois o método não está considerando que os dados amostrais tem erros em x. Já que o método usa dos $x_i$ para achar os $y_i$ com menor erro total, será sempre melhor o ajuste onde o erro está introduzido em x do que em y.</p>
+<p>E por último, ao introduzirmos erros tanto em x como em y, acabomos por deslocar os pontos de forma mais parecida com o comportamento de uma reta do que deslocamentos puramente em uma direção o que acaba contribuindo para um $R^2$ maior do que os outros dois casos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 
 
 
@@ -17657,7 +17772,6 @@ R² = 99.71%
     </div>
   </div>
 </body>
-
 
 
 
